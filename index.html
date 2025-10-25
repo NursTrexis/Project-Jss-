@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Shop - Премиум кроссовки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">NIKE<span>SHOP</span></div>
+        <ul id="nav-menu">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#stats">О нас</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <button id="auth-btn" class="nav-auth-btn">👤 Войти</button>
+        <button id="cart-btn" class="cart-btn">🛒 Корзина (<span id="cart-count">0</span>)</button>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>JUST DO IT</h1>
+            <p>Стиль. Скорость. Удобство. Почувствуй мощь.</p>
+            <a href="#catalog" class="btn">Смотреть каталог</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="catalog">
+        <h2>🔥 Каталог кроссовок</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="https://nikearprod.vtexassets.com/arquivos/ids/1099302-1000-1000?v=638628228709530000&width=1000&height=1000&aspect=true" alt="Nike Air Max">
+                <h3>Nike Air Max</h3>
+                <p>59 990 ₸</p>
+                <button onclick="addToCart('Nike Air Max', 59990)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://nikearprod.vtexassets.com/arquivos/ids/1531108-1000-1000?v=638887887083830000&width=1000&height=1000&aspect=true" alt="Nike Zoom">
+                <h3>Nike Zoom</h3>
+                <p>64 500 ₸</p>
+                <button onclick="addToCart('Nike Zoom', 64500)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://nikearprod.vtexassets.com/arquivos/ids/1548594-1000-1000?v=638890858064130000&width=1000&height=1000&aspect=true" alt="Nike Pegasus">
+                <h3>Nike Pegasus</h3>
+                <p>52 000 ₸</p>
+                <button onclick="addToCart('Nike Pegasus', 52000)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://nikearprod.vtexassets.com/arquivos/ids/1369022-1000-1000?v=638739473240870000&width=1000&height=1000&aspect=true alt="Nike Jordan">
+                <h3>Nike Jordan</h3>
+                <p>71 200 ₸</p>
+                <button onclick="addToCart('Nike Jordan', 71200)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://nikearprod.vtexassets.com/arquivos/ids/1027249-1000-1000?v=638581395900000000&width=1000&height=1000&aspect=true" alt="Nike TN Red">
+                <h3>Nike TN Red</h3>
+                <p>77 900 ₸</p>
+                <button onclick="addToCart('Nike TN Red', 77900)">В корзину</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://nikearprod.vtexassets.com/arquivos/ids/1172929-1000-1000?v=638654762382800000&width=1000&height=1000&aspect=true" alt="Nike Supreme">
+                <h3>Nike Supreme</h3>
+                <p>88 500 ₸</p>
+                <button onclick="addToCart('Nike Supreme', 88500)">В корзину</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <h2>Наши достижения</h2>
+        <div class="stats-box">
+            <div class="stats-item success">
+                <span class="counter" data-target="148134">0</span>
+                <p>Продано кроссовок</p>
+            </div>
+            <div class="stats-item danger">
+                <span class="counter" data-target="109472">0</span>
+                <p>Довольных клиентов</p>
+            </div>
+            <div class="stats-item success">
+                <span class="counter" data-target="104">0</span>
+                <p>Городов доставки</p>
+            </div>
+            <div class="stats-item danger">
+                <span class="counter" data-target="24">0</span>
+                <p>Лет опыта</p>
+            </div>
+            <div class="stats-item success">
+                <span class="counter" data-target="42464">0</span>
+                <p>Партнеров</p>
+            </div>
+            <div class="stats-item danger">
+                <span class="counter" data-target="5000000">0</span>
+                <p>Подписчиков</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Контакты</h2>
+        <p>Есть вопросы? Свяжись с нами!</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <ul>
+                    <li>📞 Телефон: +7 707 123 45 67</li>
+                    <li>📱 WhatsApp: +7 777 987 65 43</li>
+                    <li>📩 Email: nike.shop@mail.kz</li>
+                    <li>📍 Адрес: г. Алматы, ул. Абая 150</li>
+                </ul>
+            </div>
+            <div class="map-container">
+                <!-- Вставлено iframe с картой -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156420.1852694477!2d76.90351467304339!3d43.240942648665396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d16c5cbab%3A0x3d44668fad986d76!2z0JDQu9C80LDRgtGL!5e0!3m2!1sru!2skz!4v1761413114714!5m2!1sru!2skz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span id="close-cart">✖</span>
+            <h2>Ваша корзина</h2>
+            <div id="cart-items"></div>
+            <p class="total">Итого: <span id="total-price">0</span> ₸</p>
+            <button class="checkout-btn" onclick="checkout()">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-content">
+            <span id="close-auth">✖</span>
+            <h2>Регистрация</h2>
+            <form id="auth-form" onsubmit="return handleAuth(event);">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="Имя пользователя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Пароль" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Подтвердите пароль" required>
+                </div>
+                <button type="submit" class="auth-btn">Зарегистрироваться</button>
+            </form>
+            <p class="auth-switch">Уже есть аккаунт? <a href="javascript:void(0)" onclick="toggleAuthMode()">Войти</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
